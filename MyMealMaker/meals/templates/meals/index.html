@@ -1,0 +1,7 @@
+<h1>Welcome to My Meal Maker</h1>
+<h3>Recipes:</h3>
+<ul>
+{% for recipe in recipes %}
+    <li><a href="{% url 'recipe' recipe.meal_id %}">{{ recipe.name }}</a></li>
+{% endfor %}
+</ul>

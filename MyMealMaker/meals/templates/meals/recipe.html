@@ -1,0 +1,14 @@
+<h3>You are looking at the recipe for {{recipe.name}}</h3>
+<h4>Ingredients</h4>
+<ul>
+{% for ingredient in recipe.ingredient_set.all %}
+    <li>{{ ingredient.name }} - {{ ingredient.amount }}</li>
+{% endfor %}
+</ul>
+<h4>Directions</h4>
+<ul>
+{% for direction in recipe.direction_set.all %}
+    <li>{{ forloop.counter }}) {{direction}}</li>
+{% endfor %}
+</ul>
+        
